@@ -1,0 +1,21 @@
+body, html {
+  background: #011d4b !important;
+  color: white !important;
+  height: 100%;
+  width: 100%;
+}
+
+#sky, #skyWords {
+  position: fixed;
+}
+
+input[type="text"], input[type="text"]:focus {
+  background-color : #112b53;
+  color: white !important;
+}
+
+input[type="text"]:focus {
+  border-color: #ffffff;
+  box-shadow: 0 1px 1px #ffffff13 inset, 0 0 8px #ffffff99;
+  outline: 0 none;
+}
