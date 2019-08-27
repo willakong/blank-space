@@ -29,7 +29,7 @@ function disappear() {
 
   var ctx = canvas.getContext("2d");
   ctx.font = font_size + "px sans-serif";
-  ctx.fillStyle = "rgb(168, 169, 181, 1.0)";
+  ctx.fillStyle = "rgb(255, 255, 255, 1.0)";
 
   function draw()
   {
