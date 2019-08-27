@@ -9,6 +9,15 @@ function disappear() {
 
   // Word effect
   var canvas = document.getElementById("skyWords");
+  var ctx = canvas.getContext("2d");
+
+  // Kill all timers
+  var killId = setTimeout(function() {
+    for (var i = killId; i > 0; i--) clearInterval(i)
+  }, 10);
+
+  ctx.clearRect(0, 0, w, h);
+
   var w = window.innerWidth;
   var h = window.innerHeight;
   canvas.width = w;
@@ -27,7 +36,6 @@ function disappear() {
     });
   }
 
-  var ctx = canvas.getContext("2d");
   ctx.font = font_size + "px sans-serif";
   ctx.fillStyle = "rgb(255, 255, 255, 1.0)";
 
@@ -43,7 +51,7 @@ function disappear() {
   var drawInterval = setInterval(draw, 30);
 
   // Stop drawing after 5s and clear the sky
-  setTimeout(function(){
+  var stopTimout = setTimeout(function(){
     clearInterval(drawInterval);
 
     // Fade out the remaining text
